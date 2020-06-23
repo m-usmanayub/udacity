@@ -10,7 +10,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("musmanayub/myudacityproject")
+        app = docker.build("musmanayub/myudacityproject:v1")
         echo "Build Complete"
         sh 'docker image ls'
         }
