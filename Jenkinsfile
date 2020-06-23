@@ -5,4 +5,12 @@ node {
         checkout scm
         echo "Checkout complete"
     }
+    
+        stage('Build Image') {
+        /* This builds the actual image; synonymous to
+         * docker build on the command line */
+
+        app = docker.build("musmanayub/myudacityproject")
+        echo "Build Complete"
+        sh 'docker image ls'
 }
