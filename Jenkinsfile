@@ -13,4 +13,5 @@ node {
         app = docker.build("musmanayub/myudacityproject")
         echo "Build Complete"
         sh 'docker image ls'
+        }
 }
