@@ -32,8 +32,8 @@ node {
             sh "kubectl get nodes"
             sh "kubectl get pods"
             sh "kubectl apply -f aws/kube/aws-auth-cm.yaml"
-            sh "kubectl apply -f aws/kube/depl.yml"
-            sh "kubectl apply -f aws/kube/lb.yml"
+            sh "kubectl apply -f aws/kube/depl.yaml"
+            sh "kubectl apply -f aws/kube/lb.yaml"
             sh "kubectl get nodes"
             sh "kubectl get pods"
         }
