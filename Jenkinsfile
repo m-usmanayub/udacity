@@ -18,20 +18,16 @@ node {
         }
 
         stage('Push image') {
-        /* Finally, we'll push the image with two tags:
-         * First, the incremental build number from Jenkins
-         * Second, the 'latest' tag.
-         * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('', 'dockerhub') {
+            docker.withRegistry('', 'dockerhub') {
             app.push()
         echo 'Image pushed to Docker Hub'
         }
     }
 
-stage('Deploying') {
+    stage('Deploying') {
       echo 'Deploying to AWS...'
       dir ('./') {
-        withAWS(credentials: 'aws-jenkins', region: 'us-west-2') {
+        withAWS(credentials: 'aws-creds', region: 'us-west-2') {
             sh "aws eks --region us-west-2 update-kubeconfig --name CapstoneEKSUdacity-0TtoHmzFVWVJ"
             sh "kubectl get nodes"
             sh "kubectl get pods"
