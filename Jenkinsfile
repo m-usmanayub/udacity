@@ -42,3 +42,5 @@ stage('Deploying') {
             sh "kubectl get pods"
         }
 }
+}
+}
