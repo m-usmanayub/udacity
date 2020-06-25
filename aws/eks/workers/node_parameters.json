@@ -1,0 +1,14 @@
+[
+    {
+      "ParameterKey": "EnvironmentName",
+      "ParameterValue": "UdacityCapstoneProject"
+    },
+    {
+      "ParameterKey": "SshKey",
+      "ParameterValue": "udacity"
+    },
+    {
+      "ParameterKey": "DesiredInstances",
+      "ParameterValue": "2"
+    }
+  ]
