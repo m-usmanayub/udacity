@@ -12,7 +12,7 @@ node {
     }
 
         stage('Build Image') {
-        app = docker.build(${registry})
+        app = docker.build("${registry}")
         echo "Build Complete"
         sh 'docker image ls'
         }
