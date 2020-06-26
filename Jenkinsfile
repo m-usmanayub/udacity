@@ -18,7 +18,7 @@ node {
         }
 
         stage('Push image') {
-            docker.withRegistry('', 'dockerhub-ap') {
+            docker.withRegistry('', 'docker-hub') {
             app.push()
         echo 'Image pushed to Docker Hub'
         }
