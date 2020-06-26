@@ -1,5 +1,5 @@
 node {
-    def registry = 'musmanayub/udacity-project'
+    def registry = 'aamirpinger/udacity-projecct-capstone'
     stage ('Git Repo Checkout') {
         echo "Git Repo Checkout"
         checkout scm
@@ -18,7 +18,7 @@ node {
         }
 
         stage('Push image') {
-            docker.withRegistry('', 'dockerhub') {
+            docker.withRegistry('', 'dockerhub-ap') {
             app.push()
         echo 'Image pushed to Docker Hub'
         }
